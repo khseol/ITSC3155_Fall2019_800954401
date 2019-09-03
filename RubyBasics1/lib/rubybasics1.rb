@@ -20,4 +20,12 @@ end
 # Part III
 def sum_to_n? arr, n
   # YOUR CODE HERE
-end
+  if (arr.length == 1)
+    return false
+  elsif(arr.empty? == true)
+    return false
+  else
+    #methods found and to use: combination, and any?
+    arr.combination(2).any? {|x,y| x+y == n}
+  end
+  end
