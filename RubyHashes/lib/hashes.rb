@@ -40,7 +40,22 @@ end
 # Part III
 def hash_2_array contacts
     # YOUR CODE HERE
-   
+   arr = [] #will contain the 1-d array, maiking the whole array 2-d
+   emailArr= [] 
+   phoneArr = []
+   nameArr = []
     
+    contacts.each do |key,value|
+        keyToArr = :"#{key}"
+        
+        ##pushes the elements into the array
+        emailArr << contacts[keyToArr][:email] #tells which one is which
+        phoneArr << contacts[keyToArr][:phone]
+        nameArr << "#{key}" #no colon, appended into the array
+    end    
+    arr << emailArr
+    arr << phoneArr
+    arr << nameArr
     
+    return arr
 end
