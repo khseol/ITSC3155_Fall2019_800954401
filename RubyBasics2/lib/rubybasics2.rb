@@ -3,6 +3,12 @@
 # Part I
 def hello(name)
   # YOUR CODE HERE
+  
+    message = 'Hello, ' + name
+    
+    return message
+   
+  
 end
 
 # Part II
