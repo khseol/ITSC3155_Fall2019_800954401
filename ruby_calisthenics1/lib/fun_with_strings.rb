@@ -44,13 +44,34 @@ module FunWithStrings
     str.split(' ').each  {|w| word[w] = word[w] + 1 }
     #for each iteration w, w is the key to the hash, and value is equal 
     #to first instance plus, the next instance of the word appearing.
-    word
-    
-    
+    return word
   end
+  
+  
   def anagram_groups
-    # your code here
+    
+    #charcter case doesn't matter
+    #what about an anagram?
+      #has the same letters
+      #has the same length in one word to another
+
+    #how to distinguish between an element of one word to another 
+    #with the same exact entirety of characters(no less, no more) and length and group them together?
+    str = self.downcase
+    str = str.split #automatically spplit the array of words by the space or if NULL, no split
+    str = str.group_by{|word| word.chars.sort}.values 
+    #group_by return te array into a hash
+    #by each word element of the split string,
+    #group them by performing to see if per word carries the same number and type of characters.
+    
+    #ie. the string of sorted characters are the key
+    #value  is the anagram from the sorted characters in the key.
+    return str
+    
   end
+  
+  
+  
 end
 
 # make all the above functions available as instance methods on Strings:
@@ -61,3 +82,4 @@ end
 s = String.new()
 s.palindrome?()
 s.count_words()
+s.anagram_groups()
