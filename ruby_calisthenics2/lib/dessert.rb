@@ -31,9 +31,15 @@ class Dessert
 end
 
 class JellyBean < Dessert
-  # add code for setters and getters
+  # add code for setters and getters == attr_accessor :variable
+  attr_accessor :flavor #from the jelly bean challenge
   def initialize(flavor)
     # your code here
+    @flavor = flavor
+    
+    #from the instructions, needs to inherit from the dessert class
+    @name = @flavor + " jelly bean"  #to concatenate the flavor-filled jelly bean
+    @calories = 5
   end
 end
 
