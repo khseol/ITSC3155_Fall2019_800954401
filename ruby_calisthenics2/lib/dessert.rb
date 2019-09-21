@@ -25,7 +25,12 @@ class Dessert
   
   def delicious? #always~ :)
     # your code here
-    return true
+  
+    if @flavor =='licorice'
+      return false
+    else
+      return true #if the flavor is NOT licorice
+    end  
     
   end
 end
@@ -41,5 +46,7 @@ class JellyBean < Dessert
     @name = @flavor + " jelly bean"  #to concatenate the flavor-filled jelly bean
     @calories = 5
   end
+  
+  
 end
 
