@@ -4,9 +4,9 @@
 def hello(name)
   # YOUR CODE HERE
   
-    message = 'Hello, ' + name
+     message = 'Hello, ' + name
     
-    return message
+    # return message
 end
 
 # Part II
@@ -15,11 +15,11 @@ def starts_with_consonant? s #parameter is a string
   #conditional to check is the first letter in the name contains a constant...
   
   #ie. no vowels, numbers, and special characters
-  if s[0] =~ /[^AEIOU]/ && s[0] =~ /[^aeiou]/ && s[0] =~ /[^\d]/ && s[0] =~ /[^$&+,:;=?@#]/
-    return true
-  else
-    return false
-  end  
+   if s[0] =~ /[^AEIOU]/ && s[0] =~ /[^aeiou]/ && s[0] =~ /[^\d]/ && s[0] =~ /[^$&+,:;=?@#]/
+     return true
+   else
+     return false
+   end  
  
 end
 
@@ -43,13 +43,13 @@ def binary_multiple_of_4? s
   
   #conditional: will have multiple if functions...
 
-  if s =~ /[A-Z]/ || s =~ /[a-z]/ || s =~ /[2-9]/ || s =~ /[$&+,:;=?@#]/ 
-    return false #if the binary string contains any other charcter that is not a 0 or 1
-  elsif s =~ /00$/  
-    return true #if the the binary string has a double zero as the last two digits of indefinite string length
-  elsif s.length == 1 && s[0] =~ /0/  
-    return true # if the binary string is just one binary digit, and digit is ONLY a 0
-  else
-    return false #if the binary string is indeed a binary string, but is NOT a multiple of 4
-  end  
+   if s =~ /[A-Z]/ || s =~ /[a-z]/ || s =~ /[2-9]/ || s =~ /[$&+,:;=?@#]/ 
+     return false #if the binary string contains any other charcter that is not a 0 or 1
+   elsif s =~ /00$/  
+     return true #if the the binary string has a double zero as the last two digits of indefinite string length
+   elsif s.length == 1 && s[0] =~ /0/  
+     return true # if the binary string is just one binary digit, and digit is ONLY a 0
+   else
+     return false #if the binary string is indeed a binary string, but is NOT a multiple of 4
+   end  
 end

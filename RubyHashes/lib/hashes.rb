@@ -29,7 +29,8 @@ def array2d_2_hash contact_info, contacts
     else
          contacts.each do |key,value|
          tempKey = :"#{key}"
-         arr2[tempKey] = {:email => contact_info[index][0], :phone => contact_info[index][1]}
+         arr2[tempKey] = {:email => contact_info[index][0], :phone => contact_info[index][1]} #at each element of the 2-d array
+                                                                    #first element is email, #second element is phone
          index+=1
         end
     end   
@@ -53,7 +54,7 @@ def hash_2_array contacts
         phoneArr << contacts[keyToArr][:phone]
         nameArr << "#{key}" #no colon, appended into the array
     end    
-    arr << emailArr
+    arr << emailArr ##append all to the arr array
     arr << phoneArr
     arr << nameArr
     
