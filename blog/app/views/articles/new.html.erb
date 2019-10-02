@@ -1,2 +1,18 @@
 <h1>New Article</h1>
-    
+<%= form_for :article, url: articles_path do |f| %>
+ 
+  <p>
+    <%= f.label :title %><br> <%# he f represents that :article form builder identifying object %>
+    <%= f.text_field :title %> <%# single line fill in bxes%>
+  </p>
+ 
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %> <%# multiple line fill in boxes%>
+  </p>
+ 
+  <p>
+    <%= f.submit %> <%#sumbit BUTTON is created here %>
+  </p>
+ 
+<% end %>
