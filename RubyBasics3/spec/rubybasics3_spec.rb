@@ -26,7 +26,7 @@ describe "BookInStock" do
       expect(@book.price).to eq(300.0)
     end
   end
-  describe 'constructor', :disabled => true do
+  describe 'constructor' do
     it 'should reject invalid ISBN number [10 points]' , points: 10 do
       expect { BookInStock.new('', 25.00) }.to raise_error(ArgumentError)
     end
@@ -37,7 +37,7 @@ describe "BookInStock" do
       expect { BookInStock.new('isbn1', -5.0) }.to raise_error(ArgumentError)
     end
   end
-  describe "#price_as_string", :disabled => true do
+  describe "#price_as_string" do
     it "should be defined" do
       expect(BookInStock.new('isbn1', 10)).to respond_to(:price_as_string)
     end
